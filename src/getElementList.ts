@@ -7,6 +7,21 @@ type Option = {
   showAnonymousFunction: boolean;
 };
 
+/**
+ * getElementList is a function that parses a TypeScript source file and returns a list of objects
+ * representing the hierarchy of functions, methods, classes, function expressions, arrow functions, and constructors found in the file.
+ *
+ * @param sourceFile - The TypeScript source file to be parsed.
+ * @param option - An optional object with configuration options.
+ *    - showAnonymousFunction: If true, the function will include anonymous function expressions and arrow functions in the returned list. If false, these will be excluded.
+ *
+ * @returns A list of FunctionList objects. Each object represents a function, method, class, function expression, arrow function, or constructor found in the source file.
+ *    - node: The TypeScript node corresponding to the function, method, class, function expression, arrow function, or constructor.
+ *    - name: The name of the function, method, class, function expression, arrow function, or constructor. For anonymous functions, this will be "anonymous" if the showAnonymousFunction option is true.
+ *    - children: A list of FunctionList objects representing any functions, methods, classes, function expressions, arrow functions, or constructors that are nested within the current node.
+ *
+ * The function uses a recursive approach to visit each node in the source file's abstract syntax tree (AST), and checks if the node corresponds to a function, method, class, function expression, arrow function, or constructor. If it does, an object with information about the node is created and added to the list.
+ */
 export function getElementList(
   sourceFile: ts.SourceFile,
   option?: Option
