@@ -1,0 +1,29 @@
+{
+  "name": "ts-file-util",
+  "version": "0.0.1-alpha.0",
+  "description": "ts-file-util is a TypeScript file analysis tool that provides a library and CLI for retrieving information about TypeScript files, including functions, variables, and dependencies. The library can be used as a code library in other TypeScript projects, while the CLI can be used to perform file analysis from the command line.",
+  "main": "./dist/index.js",
+  "bin": "./dist/cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typescript",
+    "util"
+  ],
+  "author": "islandryu",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "@types/treeify": "^1.0.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "commander": "^10.0.1",
+    "print-tree": "^0.1.5",
+    "treeify": "^1.1.0"
+  }
+}
